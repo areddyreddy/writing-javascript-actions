@@ -12,7 +12,7 @@ async function run() {
     console.log(`joke is ${jokeBody}`);
     console.log(`token is ${token}`);
     console.log(`attempting to create issue`);
-    const newIssue = await octokit.issues.create({
+    const newIssue = await octokit.rest.issues.create({
       repo: github.context.repo.repo,
       owner: github.context.repo.owner,
       title: issueTitle,
