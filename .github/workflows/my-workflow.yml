@@ -18,6 +18,6 @@ jobs:
       uses: ./.github/actions/joke-action
     - name: create-issue
       uses: ./.github/actions/issue-maker
-        with:
-          repo-token: ${{secrets.GITHUB_TOKEN}}
-          joke: ${{steps.jokes.outputs.joke-output}}
+      with:
+        repo-token: ${{secrets.GITHUB_TOKEN}}
+        joke: ${{steps.jokes.outputs.joke-output}}
